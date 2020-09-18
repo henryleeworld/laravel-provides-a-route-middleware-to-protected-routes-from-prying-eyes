@@ -12,10 +12,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/under-construction', function () {
     return view('under-construction');
 });
-Route::group(['middleware' => 'demoMode'], function () {
+Route::group(['middleware' => 'demo.mode'], function () {
     Route::get('/', function () {
         return view('welcome');
     });
