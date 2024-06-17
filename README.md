@@ -1,4 +1,4 @@
-# Laravel 9 提供路由中介層來過濾進入應用程式的 HTTP 請求避免窺探
+# Laravel 10 提供路由中介層來過濾進入應用程式的 HTTP 請求避免窺探
 
 引入 spatie 的 laravel-demo-mode 套件來擴增提供路由中介層來過濾進入應用程式的 HTTP 請求避免窺探，所有訪問受保護路由的使用者都將重新導向到設定的網址（例如 `/under-construction`）。使用者嘗試訪問未知路由時也是如此。
 
@@ -26,5 +26,5 @@ $ php artisan migrate
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/YqPVSc3.png)
+![](https://i.imgur.com/5YcraFv.png)
 > 訪問受保護路由將重新導向到設定的網址
