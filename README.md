@@ -1,6 +1,6 @@
-# Laravel 10 提供路由中介層來過濾進入應用程式的 HTTP 請求避免窺探
+# Laravel 11 提供路由中介層來過濾進入應用程式的 HTTP 請求避免窺探
 
-引入 spatie 的 laravel-demo-mode 套件來擴增提供路由中介層來過濾進入應用程式的 HTTP 請求避免窺探，所有訪問受保護路由的使用者都將重新導向到設定的網址（例如 `/under-construction`）。使用者嘗試訪問未知路由時也是如此。
+當你的應用程式正在維護時，所有訪問路由的使用者都將重新導向到設定的網址（例如 `/under-construction`），且會拋出 HTTP 503 狀態碼（服務無法使用），每個人（人或其他）會被要求稍後再回來。
 
 ## 使用方式
 - 把整個專案複製一份到你的電腦裡，這裡指的「內容」不是只有檔案，而是指所有整個專案的歷史紀錄、分支、標籤等內容都會複製一份下來。
@@ -21,10 +21,18 @@ $ php artisan key:generate
 $ php artisan migrate
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
+- 執行 __Artisan__ 指令的 __down__ 來啟動維護模式。
+```sh
+$ php artisan down --redirect={網址}
+```
+- 執行 __Artisan__ 指令的 __up__ 來關閉維護模式。
+```sh
+$ php artisan up
+```
 - 你可以經由 `/` 來進行訪問受保護路由。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/5YcraFv.png)
-> 訪問受保護路由將重新導向到設定的網址
+![](https://i.imgur.com/nbTfJ7N.png)
+> 訪問路由將重新導向到設定的網址
