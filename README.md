@@ -1,4 +1,4 @@
-# Laravel 11 提供路由中介層來過濾進入應用程式的 HTTP 請求避免窺探
+# Laravel 12 提供路由中介層來過濾進入應用程式的 HTTP 請求避免窺探
 
 當你的應用程式正在維護時，所有訪問路由的使用者都將重新導向到設定的網址（例如 `/under-construction`），且會拋出 HTTP 503 狀態碼（服務無法使用），每個人（人或其他）會被要求稍後再回來。
 
@@ -34,5 +34,5 @@ $ php artisan up
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/nbTfJ7N.png)
+![](https://i.imgur.com/l4NoAYm.png)
 > 訪問路由將重新導向到設定的網址
