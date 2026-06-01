@@ -1,4 +1,4 @@
-# Laravel 12 提供路由中介層來過濾進入應用程式的 HTTP 請求避免窺探
+# Laravel 13 提供路由中介層來過濾進入應用程式的 HTTP 請求避免窺探
 
 當你的應用程式正在維護時，所有訪問路由的使用者都將重新導向到設定的網址（例如 `/under-construction`），且會拋出 HTTP 503 狀態碼（服務無法使用），每個人（人或其他）會被要求稍後再回來。
 
@@ -20,6 +20,14 @@ $ php artisan key:generate
 ```sh
 $ php artisan migrate
 ```
+- 執行安裝 Vite 和 Laravel 擴充套件引用的依賴項目。
+```sh
+$ npm install
+```
+- 執行正式環境版本化資源管道並編譯。
+```sh
+$ npm run build
+```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 執行 __Artisan__ 指令的 __down__ 來啟動維護模式。
 ```sh
@@ -34,5 +42,5 @@ $ php artisan up
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/l4NoAYm.png)
+![](https://i.imgur.com/EF4eVtt.png)
 > 訪問路由將重新導向到設定的網址
